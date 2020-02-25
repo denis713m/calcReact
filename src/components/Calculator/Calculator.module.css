@@ -1,0 +1,29 @@
+.container{
+    color: #000000;
+    width:150px;
+    background: gray;
+    margin: 0 auto;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid black;
+
+}
+
+.action{
+     background: rgba(60, 55, 44, 0.38);
+     width: 25%;
+     text-align: center;
+     border: 1px solid black;
+}
+td{
+    width: 25%;
+    text-align: center;
+    border: 1px solid black;
+
+}
+.calculate{
+    background: orangered;
+    text-align: center;
+    border: 1px solid black;
+
+}
