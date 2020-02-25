@@ -1,15 +1,19 @@
 import React from 'react';
 
-class Button extends React.Component{
+class Button extends React.Component {
 
-  handleClick = (e)=> {
-    console.log("Click-button");
-    this.props.onHandleCLick(e.target.value);
-  }
+  handleClick = (e) => {
+    this.props.onHandleCLick(e.target.innerText, this.props.type);
+  };
 
-  render () {
-    return(
-    <td onClick={this.handleClick}>{this.props.text}</td>);
+  render() {
+    let element = {};
+    if (this.props.text === "=") {
+      element = <td rowSpan={4} onClick={this.handleClick}>{this.props.text}</td>;
+    } else {
+      element = <td  onClick={this.handleClick}>{this.props.text}</td>;
+    }
+    return (<>{element}</>)
   }
 }
 

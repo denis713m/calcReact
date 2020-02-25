@@ -4,9 +4,8 @@ import Button from '../Button/Button.js';
 
 class Calculator extends React.Component{
 
-  onClickActions =(e) =>{
-    console.log("Click-calc");
-    this.props.onHandleCLick(e.target.value);
+  onClickActions =(text, type) =>{
+    this.props.onHandleClick(text, type);
   };
   render () {
     return(
@@ -14,15 +13,15 @@ class Calculator extends React.Component{
         <tbody>
         <tr>
           <Button text="+" onHandleCLick={this.onClickActions}/>
-          <Button text="-"/>
-          <Button text="*"/>
-          <Button text="/"/>
+          <Button text="-" onHandleCLick={this.onClickActions}/>
+          <Button text="*" onHandleCLick={this.onClickActions}/>
+          <Button text="/" onHandleCLick={this.onClickActions}/>
         </tr>
         <tr>
-          <td >7</td>
-          <td >8</td>
-          <td >9</td>
-          <td rowSpan={4} className={styles.calculate}>=</td>
+          <Button text="7" type="d" onHandleCLick={this.onClickActions}/>
+          <Button text="8" type="d" onHandleCLick={this.onClickActions}/>
+          <Button text="9" type="d" onHandleCLick={this.onClickActions}/>
+          <Button text="=" rowSpan={4} className={styles.calculate} onHandleCLick={this.onClickActions}/>
         </tr>
         <tr>
           <td >4</td>
